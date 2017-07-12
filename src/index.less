@@ -1,0 +1,74 @@
+html, body {
+  height: 100%;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  perspective: 800px;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid #000000;
+  color: #fff;
+  background: red;
+  opacity: 0.7;
+  text-align: center;
+  line-height: 30px;
+  padding: 0 20px;
+  border-radius: 3px;
+}
+
+.x {
+  animation: x 5s linear 0s infinite;
+}
+.y {
+  animation: y 5s linear 0s infinite;
+}
+.z {
+  animation: z 5s linear 0s infinite;
+}
+.bubbleloop {
+  animation: bubbleloop 1s linear 0s infinite;
+}
+
+@keyframes z {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes x {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(360deg);
+  }
+}
+
+@keyframes y {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes bubbleloop {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
