@@ -1,6 +1,6 @@
 # effect
 
-[demo](http://zenxds.github.io/build/index.html)
+[demo](http://zenxds.github.io/effect/build/index.html)
 
 ```
 舞台 - perspective
