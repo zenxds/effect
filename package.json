@@ -41,6 +41,8 @@
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
-    "normalize.css": "^7.0.0"
+    "d3-ease": "^1.0.3",
+    "normalize.css": "^7.0.0",
+    "raf": "^3.3.2"
   }
 }
