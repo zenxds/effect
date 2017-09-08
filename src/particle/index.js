@@ -143,6 +143,7 @@ canvas.height = document.body.scrollHeight
 new Particle({
   canvas: canvas,
   color: '#4b5cc4',
+  particleRadius: window.isMobile ? 1 : 2,
   multiple: canvas.width / 58.25 * 0.4
 })
 

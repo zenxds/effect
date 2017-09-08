@@ -59,7 +59,8 @@ class Logo {
       }
     })
 
-    ctx.font = '60px PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif'
+    const fontSize = window.isMobile ? 30 : 60
+    ctx.font = `${fontSize}px PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif`
     ctx.textAlign = 'center'
     ctx.fillText("安全有顶象 认知无边界", this.x + this.width / 2, this.y + this.height + 60)
   }
