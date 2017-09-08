@@ -125,8 +125,12 @@ class Particle {
   }
 }
 
+const canvas = document.getElementById('particle-canvas-1')
+canvas.width = document.body.scrollWidth
+canvas.height = document.body.scrollHeight
+
 new Particle({
-  canvas: document.getElementById('particle-canvas-1'),
+  canvas: canvas,
   color: '#4b5cc4'
 })
 
