@@ -104,8 +104,8 @@ class Particle {
     const dots = []
     const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height)
     
-    for (let x = particleRadius; x < canvas.width - particleRadius; x += particleRadius * 2) {
-      for (let y = particleRadius; y < canvas.height - particleRadius; y += particleRadius * 2) {
+    for (let x = 0; x < canvas.width; x += particleRadius * 2) {
+      for (let y = 0; y < canvas.height; y += particleRadius * 2) {
         const point = (y * canvas.width + x) * 4
         if (imgData.data[point + 3] >= 128) {
           dots.push(new Dot({
@@ -131,7 +131,8 @@ canvas.height = document.body.scrollHeight
 
 new Particle({
   canvas: canvas,
-  color: '#4b5cc4'
+  color: '#4b5cc4',
+  multiple: canvas.width / 58.25 * 0.4
 })
 
 function mix(to, from) {
