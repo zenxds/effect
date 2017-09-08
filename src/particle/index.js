@@ -3,6 +3,7 @@ import Dot from './dot'
 import raf from 'raf'
 
 const ease = require('d3-ease')
+const Promise = require('./Promise')
 
 class Particle {
   constructor(options={}) {
@@ -12,12 +13,7 @@ class Particle {
     this.logo = this.drawLogo()
     this.dots = this.getDots()
     
-    this.clear()    
-    this.initDots()
     this.animate()
-    setInterval(() => {
-      this.animate()
-    }, 5000)
   }
 
   clear() {
@@ -44,6 +40,18 @@ class Particle {
   }
 
   animate() {
+    this.clear()    
+    this.initDots()
+
+    this.animateLogo().then(() => {
+      setTimeout(() => {
+        this.animate()
+      }, 3000)
+    })
+  }
+
+  animateLogo() {
+    const defer = Promise.defer()
     const { canvas, options } = this
     const duration = options.duration || 2000
     const start = Date.now()
@@ -67,10 +75,13 @@ class Particle {
 
       if (percent < 1) {
         raf(tick)        
+      } else {
+        defer.resolve()
       }
     }
 
     tick()
+    return defer.promise
   }
 
   drawLogo() {
