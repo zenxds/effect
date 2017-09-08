@@ -138,13 +138,12 @@ class Particle {
 
 const canvas = document.getElementById('particle-canvas-1')
 canvas.width = document.body.scrollWidth
-canvas.height = document.body.scrollHeight
+canvas.height = window.isMobile ? document.body.scrollHeight : 1000
 
 new Particle({
   canvas: canvas,
   color: '#4b5cc4',
-  particleRadius: window.isMobile ? 1 : 2,
-  multiple: canvas.width / 58.25 * 0.4
+  multiple: canvas.width / 58.25 * (window.isMobile ? 0.6 : 0.4)
 })
 
 function mix(to, from) {

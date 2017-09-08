@@ -27,7 +27,8 @@ class Logo {
     this.width = svgWidth * multiple
     this.height = svgHeight * multiple
     this.x = (canvas.width - this.width) / 2
-    this.y = (canvas.height - this.height) / 2
+    // this.y = (canvas.height - this.height) / 2
+    this.y = 100
   }
 
   draw() {
@@ -59,10 +60,11 @@ class Logo {
       }
     })
 
-    const fontSize = window.isMobile ? 30 : 60
+    const fontSize = 60
     ctx.font = `${fontSize}px PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif`
     ctx.textAlign = 'center'
-    ctx.fillText("安全有顶象 认知无边界", this.x + this.width / 2, this.y + this.height + 60)
+    ctx.fillText("安全有顶象", this.x + this.width / 2, this.y + this.height + fontSize)
+    ctx.fillText("认知无边界", this.x + this.width / 2, this.y + this.height + fontSize * 2)
   }
 
   getImageData() {
