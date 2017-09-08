@@ -1,7 +1,7 @@
 {
   "name": "effect",
   "version": "0.1.0",
-  "description": "es6-boilerplate",
+  "description": "effect",
   "main": "build/main.js",
   "scripts": {
     "start": "BABEL_ENV=dev webpack-dashboard -- webpack-dev-server -w --open --env=dev",
