@@ -138,7 +138,7 @@ class Particle {
 
 const canvas = document.getElementById('particle-canvas-1')
 canvas.width = document.body.scrollWidth
-canvas.height = window.isMobile ? document.body.scrollHeight : 1000
+canvas.height = window.isMobile ? document.body.scrollHeight : 800
 
 new Particle({
   canvas: canvas,

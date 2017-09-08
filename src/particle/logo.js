@@ -27,8 +27,7 @@ class Logo {
     this.width = svgWidth * multiple
     this.height = svgHeight * multiple
     this.x = (canvas.width - this.width) / 2
-    // this.y = (canvas.height - this.height) / 2
-    this.y = 20
+    this.y = (canvas.height - this.height) / 2
   }
 
   draw() {
@@ -60,18 +59,13 @@ class Logo {
       }
     })
 
-    const fontSize = 65
-    const texts = [
-      "安全有顶象",
-      "认知无边界",
-      "祝阿里巴巴",
-      "18岁快乐"
-    ]    
-    ctx.font = `${fontSize}px PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif`
-    ctx.textAlign = 'center'
-    texts.forEach((text, i) => {
-     ctx.fillText(text, this.x + this.width / 2, this.y + this.height + fontSize * (i + 1))
-    })
+    // const fontSize = 65
+    // const texts = []    
+    // ctx.font = `${fontSize}px PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif`
+    // ctx.textAlign = 'center'
+    // texts.forEach((text, i) => {
+    //  ctx.fillText(text, this.x + this.width / 2, this.y + this.height + fontSize * (i + 1))
+    // })
   }
 
   getImageData() {
