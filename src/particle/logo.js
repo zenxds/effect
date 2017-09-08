@@ -60,7 +60,7 @@ class Logo {
       }
     })
 
-    const fontSize = 60
+    const fontSize = 70
     ctx.font = `${fontSize}px PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif`
     ctx.textAlign = 'center'
     ctx.fillText("安全有顶象", this.x + this.width / 2, this.y + this.height + fontSize)
